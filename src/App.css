@@ -1,0 +1,56 @@
+:root {
+  --primary: #d35400;
+  --dark: #2c3e50;
+  --bg: #fcfaf8;
+}
+
+body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--bg); }
+
+/* Navbar */
+.navbar {
+  background: white; padding: 15px 5%; display: flex; 
+  justify-content: space-between; align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100;
+}
+
+/* Category Filters */
+.filter-container {
+  display: flex; justify-content: center; gap: 10px;
+  padding: 20px; flex-wrap: wrap; background: white;
+  border-bottom: 1px solid #eee;
+}
+.filter-btn {
+  padding: 8px 20px; border-radius: 20px; border: 1px solid var(--primary);
+  background: transparent; color: var(--primary); cursor: pointer;
+  font-weight: 600; transition: 0.3s;
+}
+.filter-btn.active, .filter-btn:hover {
+  background: var(--primary); color: white;
+}
+
+/* Admin Dashboard */
+.admin-box {
+  max-width: 900px; margin: 20px auto; background: #fff3e0; padding: 25px;
+  border-radius: 15px; border: 2px dashed var(--primary);
+}
+.form-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.form-row input, .form-row select { flex: 1; min-width: 200px; padding: 12px; border-radius: 8px; border: 1px solid #ddd; }
+
+/* Grid & Cards */
+.product-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px; padding: 30px 5%;
+}
+.card {
+  background: white; border-radius: 15px; overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s;
+}
+.card-img { width: 100%; height: 220px; object-fit: cover; background: #eee; }
+.card-body { padding: 15px; }
+
+/* Buttons */
+.btn { padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px; transition: 0.3s; }
+.btn-buy { background: var(--dark); color: white; }
+.btn-edit { background: #2980b9; color: white; }
+.btn-del { background: #c0392b; color: white; }
+.btn-submit { background: var(--primary); color: white; }
